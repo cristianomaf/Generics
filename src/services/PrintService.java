@@ -3,16 +3,16 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {     
+public class PrintService<T>{ // tipo T ou qualquer nome  Generics    
 	
-	private List<Integer> lista = new ArrayList<>();  
+	private List<T> lista = new ArrayList<>();  
 	
-	public void addvalor(int valor) {    // recebe um valor adiciona na lista
+	public void addvalor(T valor) {    // recebe um valor adiciona na lista
 		lista.add(valor);
 	}
 	
 	//primeiro elemento da lista
-	public int primeiroelemento() {
+	public T primeiroelemento() {
 		if(lista.isEmpty()) {         //verifica se esta vazia
 			throw new IllegalStateException("Lista esta vazia");
 		}
